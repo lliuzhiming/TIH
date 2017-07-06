@@ -4,6 +4,20 @@ package com.tih.bean;
  * Created by DELL on 2017/7/4.
  */
 
+
+/**
+ *{
+ "reason": "success",
+ "result": [
+ {
+ "day": "1/1",
+ "date": "前45年01月01日",
+ "title": "罗马共和国开始使用儒略历",
+ "e_id": "1"
+ }
+ ],
+ "error_code": 0
+ }**/
 public class Event {
 
     int error_code;
@@ -16,7 +30,7 @@ public class Event {
 
     String date;
 
-    int e_id;
+    int e_id;//事件ID
 
     String title;
 
