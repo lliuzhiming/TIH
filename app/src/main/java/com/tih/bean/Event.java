@@ -5,6 +5,8 @@ package com.tih.bean;
  */
 
 
+import java.util.List;
+
 /**
  *{
  "reason": "success",
@@ -20,35 +22,11 @@ package com.tih.bean;
  }**/
 public class Event {
 
-    int error_code;
+    private String reason;
 
-    String result;
+    private List<EventResult> result;
 
-    String reason;
-
-    String day;
-
-    String date;
-
-    int e_id;//事件ID
-
-    String title;
-
-    public int getError_code() {
-        return error_code;
-    }
-
-    public void setError_code(int error_code) {
-        this.error_code = error_code;
-    }
-
-    public String getResult() {
-        return result;
-    }
-
-    public void setResult(String result) {
-        this.result = result;
-    }
+    private int error_code;
 
     public String getReason() {
         return reason;
@@ -58,36 +36,19 @@ public class Event {
         this.reason = reason;
     }
 
-    public String getDay() {
-        return day;
+    public List<EventResult> getResult() {
+        return result;
     }
 
-    public void setDay(String day) {
-        this.day = day;
+    public void setResult(List<EventResult> result) {
+        this.result = result;
     }
 
-    public String getDate() {
-        return date;
+    public int getError_code() {
+        return error_code;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setError_code(int error_code) {
+        this.error_code = error_code;
     }
-
-    public int getE_id() {
-        return e_id;
-    }
-
-    public void setE_id(int e_id) {
-        this.e_id = e_id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
 }

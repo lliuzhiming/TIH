@@ -5,6 +5,8 @@ package com.tih.bean;
  */
 
 
+import java.util.List;
+
 /**
  * {
  "reason": "success",
@@ -47,74 +49,33 @@ package com.tih.bean;
  }*/
 public class Detail {
 
-    String e_id;
+    private String reason;
 
-    String content;
+    private List<DetailResult> result;
 
-    String picNo;
+    private int  error_code;
 
-    String url;
-
-    String title;
-
-    String pic_title;
-
-    int id;
-
-    public String getE_id() {
-        return e_id;
+    public String getReason() {
+        return reason;
     }
 
-    public void setE_id(String e_id) {
-        this.e_id = e_id;
+    public void setReason(String reason) {
+        this.reason = reason;
     }
 
-    public String getContent() {
-        return content;
+    public List<DetailResult> getResult() {
+        return result;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setResult(List<DetailResult> result) {
+        this.result = result;
     }
 
-    public String getPicNo() {
-        return picNo;
+    public int getError_code() {
+        return error_code;
     }
 
-    public void setPicNo(String picNo) {
-        this.picNo = picNo;
+    public void setError_code(int error_code) {
+        this.error_code = error_code;
     }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getPic_title() {
-        return pic_title;
-    }
-
-    public void setPic_title(String pic_title) {
-        this.pic_title = pic_title;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
 }
