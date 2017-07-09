@@ -6,11 +6,11 @@ package com.tih.utility;
 
 public class Constant {
 
-    public static final String BASEEVENTURL = "http://v.juhe.cn/todayOnhistroy/queryEvent.php";
+    public static final String BASEEVENTURL = "http://v.juhe.cn/todayOnhistory/queryEvent.php?";
 
     public static final String BASEDETAILURL = "http://v.juhe.cn/todayOnhistory/queryDetail.php";
 
-    public static final String KEY = "?key="; //?key=YOURKEY
+    public static final String KEY = "key="; //?key=YOURKEY
 
     public static final String DETAILID = "&e_id=";
 
