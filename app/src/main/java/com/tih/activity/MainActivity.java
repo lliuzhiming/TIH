@@ -8,16 +8,16 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
+import com.facebook.drawee.backends.pipeline.Fresco;
 import com.google.gson.Gson;
 import com.loopj.android.http.TextHttpResponseHandler;
-import com.tih.adapter.EventResultAdapter;
 import com.tih.R;
+import com.tih.adapter.EventResultAdapter;
 import com.tih.bean.Event;
 import com.tih.bean.EventResult;
 import com.tih.utility.HttpUtils;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Fresco.initialize(this);
         Date mDate=new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm E");
         String str_time = sdf.format(mDate);
@@ -74,8 +74,8 @@ public class MainActivity extends AppCompatActivity {
     private void showEventList(){
 
         //initData();
-
         loadEvent();
+
 
 
         //加入布局
@@ -88,18 +88,6 @@ public class MainActivity extends AppCompatActivity {
 
         //加入动画
         rv_EventList.setItemAnimator(new DefaultItemAnimator());
-
-    }
-
-    //建立假的数据
-    private void initData(){
-        loadEvent();
-        mEventResultList = new ArrayList<>();
-        for(int i = 0;i < events.getResult().size();i++){
-
-
-            mEventResultList.add(events.getResult().get(i));
-        }
 
     }
 
@@ -126,7 +114,6 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 List<EventResult> temp = events.getResult();
                 adapter=new EventResultAdapter(temp);
-                Log.d("lyw", "run: " + temp);
                 rv_EventList.setAdapter(adapter);
             }
         });

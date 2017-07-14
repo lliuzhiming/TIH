@@ -55,6 +55,7 @@ public class Detail {
 
     private int  error_code;
 
+
     public String getReason() {
         return reason;
     }
